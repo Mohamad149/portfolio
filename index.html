@@ -153,20 +153,21 @@
   .hero p.lead{margin-top:24px;font-size:18px;line-height:1.68;color:var(--stone);max-width:52ch;}
 
   .hero-cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:34px 0 40px;}
-  .btn{display:inline-flex;align-items:center;gap:9px;border-radius:999px;padding:14px 24px;
+  .hero-btn{display:inline-flex;align-items:center;gap:9px;border-radius:999px;padding:14px 24px;
     font-size:14.5px;font-weight:600;border:1px solid var(--line);background:var(--surface-soft);
     color:var(--ink);cursor:pointer;
     transition:translate .25s ease,background .25s ease,border-color .25s ease,box-shadow .25s ease;}
-  .btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;
+  .hero-btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;
     transition:transform .25s ease;}
-  .btn:hover{translate:0 -2px;border-color:rgba(199,243,107,.42);background:var(--chip-hover-bg);}
-  .btn:hover svg{transform:translateX(3px);}
-  html[lang="ar"] .btn svg{transform:scaleX(-1);}
-  html[lang="ar"] .btn:hover svg{transform:scaleX(-1) translateX(3px);}
-  .btn.primary{background:var(--olive);color:#0A0C0F;border-color:var(--olive);
+  .hero-btn:hover{translate:0 -2px;border-color:rgba(199,243,107,.42);background:var(--chip-hover-bg);}
+  .hero-btn:hover svg:not(.no-flip){transform:translateX(3px);}
+  .hero-btn:hover svg.no-flip{transform:translateY(2px);}
+  html[lang="ar"] .hero-btn svg:not(.no-flip){transform:scaleX(-1);}
+  html[lang="ar"] .hero-btn:hover svg:not(.no-flip){transform:scaleX(-1) translateX(3px);}
+  .hero-btn.primary{background:var(--olive);color:#0A0C0F;border-color:var(--olive);
     box-shadow:0 14px 34px rgba(199,243,107,.16);}
-  .btn.primary:hover{background:#D9F99D;box-shadow:0 18px 44px rgba(199,243,107,.24);}
-  .btn.ghost{background:transparent;}
+  .hero-btn.primary:hover{background:#D9F99D;box-shadow:0 18px 44px rgba(199,243,107,.24);}
+  .hero-btn.ghost{background:transparent;}
 
   .hero-facts{display:grid;grid-template-columns:repeat(3,1fr);
     border-top:1px solid var(--line);padding-top:22px;}
@@ -518,8 +519,9 @@
         <h1 class="reveal-up r1" dir="auto" data-i18n="hero.h1">Mohammad Alshakhshir — <em>Flutter</em> developer.</h1>
         <p class="lead reveal-up r2" dir="auto" data-i18n="hero.lead">Computer Science graduate building Flutter apps with Clean Architecture, BLoC and Firebase — and full-stack web with ASP.NET. Most recently Able+, an accessibility app for Jordan, built with a four-person team.</p>
         <div class="hero-cta reveal-up r3">
-          <a class="btn primary" href="#work"><span data-i18n="hero.ctaWork">View my work</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
-          <a class="btn ghost" href="#contact" data-i18n="hero.ctaContact">Get in touch</a>
+          <a class="hero-btn primary" href="#work"><span data-i18n="hero.ctaWork">View my work</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+          <a class="hero-btn ghost" href="#contact" data-i18n="hero.ctaContact">Get in touch</a>
+          <a class="hero-btn ghost" href="assets/Mohammad-Alshakhshir-CV.pdf" download><svg class="no-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-4.5-4.5M12 15l4.5-4.5M4 18v2a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-2"/></svg><span data-i18n="hero.ctaCv">Download CV</span></a>
         </div>
         <div class="hero-facts reveal-up r5" dir="auto">
           <div class="fact"><b>10</b><span data-i18n="hero.factProjects">PROJECTS BUILT</span></div>
@@ -815,7 +817,7 @@
     en: {
       'nav.brand':'Mohammad','nav.about':'About','nav.skills':'Skills','nav.work':'Work','nav.certs':'Certificates','nav.contact':'Contact',
       'hero.status':'Open to work','hero.statusSub':'Al Zarqa, Jordan · Flutter &amp; full-stack',
-      'hero.ctaWork':'View my work','hero.ctaContact':'Get in touch',
+      'hero.ctaWork':'View my work','hero.ctaContact':'Get in touch','hero.ctaCv':'Download CV',
       'hero.factProjects':'PROJECTS BUILT','hero.factCerts':'CERTIFICATES',
       'hero.factInternVal':'3 mo','hero.factIntern':'FLUTTER INTERNSHIP',
       'hero.h1':'Mohammad Alshakhshir — <em>Flutter</em> developer.',
@@ -852,7 +854,7 @@
     ar: {
       'nav.brand':'محمد','nav.about':'نبذة','nav.skills':'المهارات','nav.work':'الأعمال','nav.certs':'الشهادات','nav.contact':'تواصل',
       'hero.status':'متاح للعمل','hero.statusSub':'الزرقاء، الأردن · Flutter وويب متكامل',
-      'hero.ctaWork':'شوف أعمالي','hero.ctaContact':'تواصل معي',
+      'hero.ctaWork':'شوف أعمالي','hero.ctaContact':'تواصل معي','hero.ctaCv':'حمّل السيرة الذاتية',
       'hero.factProjects':'مشروع',
       'hero.factCerts':'شهادات',
       'hero.factInternVal':'٣ شهور','hero.factIntern':'تدريب Flutter',
